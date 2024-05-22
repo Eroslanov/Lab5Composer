@@ -8,7 +8,14 @@ use pizza\PizzaStore;
 echo 'Меню' . PHP_EOL;
 echo 'pepperoni' . PHP_EOL;
 echo 'cheese' . PHP_EOL;
-echo "какую пиццу вы у нас заберёте: ";
+echo "Введите тип пиццы (pepperoni/cheese): ";
 $text = trim(readline());
+
 $pizzaStore = new PizzaStore();
-$pizzaStore->orderPizza($text);
+
+if (in_array($text, ['pepperoni', 'cheese'])) {
+    $pizza = $pizzaStore->orderPizza($text);
+    echo "Вам готовит пицца: " . $pizza->getName() . PHP_EOL;
+} else {
+    echo "Ошибка: неизвестный тип пиццы" . PHP_EOL;
+}
