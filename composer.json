@@ -1,0 +1,19 @@
+{
+  "name": "Eroslanov/lab5-composer",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "PizzaStore\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Eroslanov ivan",
+      "email": "Vantwo28@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpstan/phpstan": "^1.11",
+    "squizlabs/php_codesniffer": "3.*"
+  }
+}
