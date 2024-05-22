@@ -4,7 +4,8 @@ namespace pizza;
 
 class PizzaStore
 {
-    public function orderPizza($type)
+
+    public function orderPizza(string $type): void
     {
         $pizza = $this->createPizza($type);
         if ($pizza) {
@@ -15,7 +16,8 @@ class PizzaStore
         }
     }
 
-    public function createPizza($type)
+
+    public function createPizza(string $type): void
     {
         switch ($type) {
             case 'cheese':
